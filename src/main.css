@@ -1,0 +1,56 @@
+/* rich-black: rgba(13, 19, 33, 1);
+prussian-blue: rgba(29, 45, 68, 1);
+paynes-gray: rgba(62, 92, 118, 1);
+silver-lake-blue: rgba(116, 140, 171, 1);
+eggshell: rgba(240, 235, 216, 1); */
+nav {
+    background-color: #333;
+    color: rgba(240, 235, 216, 1); 
+    padding: 0px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  nav div {
+    font-size: 35px;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0px;
+    display: flex;
+
+  }
+  
+  nav li  {
+    margin-right: 5px;
+    padding: 20px;
+  }
+  nav li a{
+    font-size: 30px;
+    text-decoration: none;
+    color: rgb(101, 181, 251);
+  }
+.nav_car {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgba(240, 235, 216, 1);
+    font-size: 20px;
+  }
+  
+  .nav_car img {
+    width: 40px;
+  }
+  
+  .nav_car p {
+    margin: 4px 0;
+    font-weight: bold;
+  }
+  .item-list-container {
+    color:rgb(0, 70, 167);
+    font-size: 30px;
+    padding: 20px;
+  }

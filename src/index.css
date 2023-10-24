@@ -1,0 +1,19 @@
+.Navbar {
+    background-color: #0074d9;
+    color: white;
+    padding: 10px;
+  }
+  
+  /* Estilos para el componente ItemListContainer */
+  .ItemListContainer {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Estilos para el texto de bienvenida en ItemListContainer */
+  .greeting {
+    font-size: 24px;
+    margin: 10px 0;
+  }
+
