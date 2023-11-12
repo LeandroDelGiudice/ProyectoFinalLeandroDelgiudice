@@ -1,16 +1,42 @@
- import {CartWidget } from "./cartWidget";
- import "../main.css"
- export const Navbar = () => {
+import { NavLink } from "react-router-dom";
+import { Container } from "react-bootstrap";
+import { Nav } from "react-bootstrap";
+import { Navbar } from "react-bootstrap";
+
+import { CartWidget } from "./cartWidget";
+
+export const CustomNavbar = () => {
   return (
-    <nav>
-      <div>Repuestos usados BMW</div>
-      <ul>
-        <li><a href="">Motores</a></li>
-        <li><a href="">Cajas</a></li>
-        <li><a href="">Diferenciales</a></li>
-      </ul>
-      < CartWidget />
-    </nav>
-    
+    <Navbar bg="dark" data-bs-theme="dark" >
+      <Container>
+        <Navbar.Brand href="#home">Repuestos Usados BMW</Navbar.Brand>
+        <Nav className="me-auto">
+          <NavLink to="category/Motores">Motores</NavLink>
+          <NavLink to="category/Cajas">Cajas</NavLink>
+          <NavLink to="category/Diferenciales">Diferenciales</NavLink>
+        </Nav>
+        <CartWidget />
+      </Container>
+    </Navbar>
   );
- }; 
+};
+
+/*  import { NavLink } from "react-router-dom";
+import { Container, Nav, Navbar as BootstrapNavbar } from "react-bootstrap";
+import { CartWidget } from "./cartWidget";
+
+export const CustomNavbar = () => {
+  return (
+    <BootstrapNavbar bg="dark" data-bs-theme="dark">
+      <Container>
+        <BootstrapNavbar.Brand href="#home">Repuestos Usados BMW</BootstrapNavbar.Brand>
+        <Nav className="me-auto">
+          <NavLink to="category/Motores">Motores</NavLink>
+          <NavLink to="category/Cajas">Cajas</NavLink>
+          <NavLink to="category/Diferenciales">Diferenciales</NavLink>
+        </Nav>
+        <CartWidget />
+      </Container>
+    </BootstrapNavbar>
+  );
+}; */
