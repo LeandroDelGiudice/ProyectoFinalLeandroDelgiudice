@@ -1,4 +1,4 @@
-export const itemDetail =({item}) => {
+ export const ItemDetail =({item}) => {
     return (
         <>
         <h1>{item.title}</h1>
@@ -6,4 +6,9 @@ export const itemDetail =({item}) => {
         </>
 
     );
-};
+}; 
+  
+  
+  
+  
+  
