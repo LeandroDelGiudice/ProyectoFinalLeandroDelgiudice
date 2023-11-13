@@ -1,50 +1,5 @@
-
- nav {
-    background-color: #333;
-    color: rgb(82, 80, 72); 
-    padding: 0px;
-    justify-content: space-around;
-  }
-  
-  nav {
-    font-size: xx-large;
-  }
-  
-  nav ul {
-    list-style: none;
-    padding: 0px;
-    display: flex;
-
-  }
-  
-  nav li  {
-    margin-right: 5px;
-    padding: 20px;
-  }
-  nav li a{
-    font-size: 30px;
+nav {
     text-decoration: none;
-    color: rgb(101, 181, 251);
-  }
-.nav_car {
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: rgba(240, 235, 216, 1);
-    font-size: 20px;
+    font-size: 40px;
   }
   
-  .nav_car img {
-    width: 40px;
-  }
-  
-  .nav_car p {
-    margin: 4px 0;
-    font-weight: bold;
-  }
-  .item-list-container {
-    color:rgb(0, 70, 167);
-    font-size: 30px;
-    padding: 20px;
-  } 

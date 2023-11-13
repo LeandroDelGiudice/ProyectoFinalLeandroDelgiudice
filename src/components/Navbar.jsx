@@ -14,7 +14,7 @@ export const CustomNavbar = () => {
         <Navbar.Brand>
         <NavLink to="/">Home</NavLink>
         </Navbar.Brand>
-        <Nav>
+        <Nav >
           <NavLink to="category/Motores">Motores</NavLink>
           <NavLink to="category/Cajas">Cajas</NavLink>
           <NavLink to="category/Diferenciales">Diferenciales</NavLink>
