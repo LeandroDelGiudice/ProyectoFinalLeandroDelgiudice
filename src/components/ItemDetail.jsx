@@ -2,7 +2,9 @@
     return (
         <>
         <h1>{item.title}</h1>
-        <img src = {item.pictureUrl}/>
+        <h2>precio: ${item.price}</h2>
+        <h3>Detalle: {item.description}</h3>
+        <img src = {item.pictureUrl}alt = {item.title}/>
         </>
 
     );

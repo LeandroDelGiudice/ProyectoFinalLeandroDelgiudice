@@ -4,7 +4,7 @@ export const parts =[{
     description: "pocos kilometros",
     price: 300000,
     category: "Motores",
-    pictureUrl: "../motores/01.jpg",
+    pictureUrl: "https://unsplash.com/es/fotos/parte-del-motor-negro-y-plateado-1PsOu8gyZIQ",
 },
 {
     id: 2,
@@ -20,6 +20,6 @@ export const parts =[{
     description: "reconstruido a nuevo",
     price: 50000,
     category: "Diferenciales",
-    pictureUrl: "../diferenciales/01.jpg",
+    pictureUrl: "../assets/diferenciales/01.jpg",
 },
 ]
