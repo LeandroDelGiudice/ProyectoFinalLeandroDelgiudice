@@ -1,19 +1,13 @@
-/* rich-black: rgba(13, 19, 33, 1);
-prussian-blue: rgba(29, 45, 68, 1);
-paynes-gray: rgba(62, 92, 118, 1);
-silver-lake-blue: rgba(116, 140, 171, 1);
-eggshell: rgba(240, 235, 216, 1); */
-/* nav {
+
+ nav {
     background-color: #333;
-    color: rgba(240, 235, 216, 1); 
+    color: rgb(82, 80, 72); 
     padding: 0px;
-    display: flex;
     justify-content: space-around;
-    align-items: center;
   }
   
-  nav div {
-    font-size: 35px;
+  nav {
+    font-size: xx-large;
   }
   
   nav ul {
@@ -53,4 +47,4 @@ eggshell: rgba(240, 235, 216, 1); */
     color:rgb(0, 70, 167);
     font-size: 30px;
     padding: 20px;
-  } */
+  } 

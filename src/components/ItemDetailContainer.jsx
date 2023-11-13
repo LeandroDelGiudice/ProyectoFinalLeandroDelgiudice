@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { ItemDetail } from "./ItemDetail";
+import { itemDetail } from "./ItemDetail";
 import { Container } from "react-bootstrap";
 import { parts } from "../assets/data/parts";
 
@@ -22,7 +22,7 @@ export const ItemDetailContainer = () => {
 
   return (
     <Container className="mt-4">
-      {item ? <ItemDetail item={item} /> : <>loading</>}
+      {item ? <itemDetail item={item} /> : <>loading</>}
     </Container>
   );
 };
