@@ -9,7 +9,9 @@ export const CustomNavbar = () => {
   return (
     <Navbar bg="dark" data-bs-theme="dark" >
       <Container>
-        <Navbar.Brand href="#home">Repuestos Usados BMW</Navbar.Brand>
+        <Navbar.Brand>
+        <NavLink to="/">Home</NavLink>
+        </Navbar.Brand>
         <Nav className="me-auto">
           <NavLink to="category/Motores">Motores</NavLink>
           <NavLink to="category/Cajas">Cajas</NavLink>
