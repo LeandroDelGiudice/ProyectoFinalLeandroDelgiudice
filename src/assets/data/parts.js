@@ -12,7 +12,7 @@ export const parts =[{
     description: "como nueva",
     price: 100000,
     category: "Cajas",
-    pictureUrl: "../cajas/01.jpg",
+    pictureUrl: "../cajas/caja1.jpg"
 },
 {
     id: 3,
@@ -20,6 +20,6 @@ export const parts =[{
     description: "reconstruido a nuevo",
     price: 50000,
     category: "Diferenciales",
-    pictureUrl: "../diferenciales/01.jpg",
+    pictureUrl: "../diferenciales/01.jpg"
 },
 ]
