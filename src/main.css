@@ -1,5 +1,8 @@
+.nav-link {
+  color: #23272b; 
+  text-decoration: none;
+}
 nav {
-    text-decoration: none;
     font-size: 40px;
   }
 .cartwidget{
