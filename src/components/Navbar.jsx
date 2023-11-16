@@ -4,7 +4,7 @@ import { Nav } from "react-bootstrap";
 import { Navbar } from "react-bootstrap";
 import "../main.css"; 
 
-import { CartWidget } from "./cartWidget";
+import { CartWidget } from "./CartWidget";
 
 export const CustomNavbar = () => {
   return (
