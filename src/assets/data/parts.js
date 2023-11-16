@@ -1,10 +1,13 @@
+import motor1 from "../motores/01.jpg"
+import caja1 from "../cajas/caja1.jpg"
+import dife1 from "../diferenciales/01.jpg"
 export const parts =[{
     id: 1,
     title: "Motor BMW m3 ",
     description: "pocos kilometros",
     price: 300000,
     category: "Motores",
-    pictureUrl: "../motores/01.jpg"
+    pictureUrl: motor1
 },
 {
     id: 2,
@@ -12,7 +15,7 @@ export const parts =[{
     description: "como nueva",
     price: 100000,
     category: "Cajas",
-    pictureUrl: "../cajas/caja1.jpg"
+    pictureUrl: caja1
 },
 {
     id: 3,
@@ -20,6 +23,6 @@ export const parts =[{
     description: "reconstruido a nuevo",
     price: 50000,
     category: "Diferenciales",
-    pictureUrl: "../diferenciales/01.jpg"
+    pictureUrl: dife1
 },
 ]
