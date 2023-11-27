@@ -2,8 +2,7 @@ import { NavLink } from "react-router-dom";
 import { Container } from "react-bootstrap";
 import { Nav } from "react-bootstrap";
 import { Navbar } from "react-bootstrap";
-import "../main.css"; 
-
+import "../main.css";
 import { CartWidget } from "./CartWidget";
 
 export const CustomNavbar = () => {
@@ -17,12 +16,12 @@ export const CustomNavbar = () => {
         </Navbar.Brand>
         <Nav>
           <Nav.Link>
-            <NavLink to="category/Motores" className="nav-link">
+            <NavLink to="category/gorros" className="nav-link">
               Motores
             </NavLink>
           </Nav.Link>
           <Nav.Link>
-            <NavLink to="category/Cajas" className="nav-link">
+            <NavLink to="category/camisas" className="nav-link">
               Cajas
             </NavLink>
           </Nav.Link>

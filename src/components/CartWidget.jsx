@@ -1,4 +1,4 @@
-/* import"../main.css" */
+import"../main.css"
 import carrito from "../assets/cart-icon.png";
 
 export const CartWidget = () =>{

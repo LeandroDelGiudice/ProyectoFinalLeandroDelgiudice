@@ -2,21 +2,17 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { ItemDetail } from "./ItemDetail";
 import { Container } from "react-bootstrap";
-import { parts } from "../assets/data/parts";
+import { getFirestore, getDoc, doc } from "firebase/firestore";
 
 export const ItemDetailContainer = () => {
   const [item, setItem] = useState(null);
   const { id } = useParams();
-  useEffect(() => {
-    const mypromise = new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve(parts);
-      }, 2000);
-    });
 
-    mypromise.then((response) => {
-      const findById = response.find((item) => item.id === Number(id));
-      setItem(findById);
+  useEffect(() => {
+    const db = getFirestore();
+    const refDoc = doc(db, "items", id);
+    getDoc(refDoc).then((snapshot) => {
+      setItem({ id: snapshot.id, ...snapshot.data() });
     });
   }, [id]);
 
