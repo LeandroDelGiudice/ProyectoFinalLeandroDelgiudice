@@ -1,7 +1,6 @@
 import { useParams } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useEffect, useState} from "react";
 import { Container } from "react-bootstrap";
-/* import { parts } from "../assets/data/parts"; */
 import { ItemList } from "./ItemList";
 import {
   getFirestore,
@@ -10,8 +9,10 @@ import {
   where,
   query,
 } from "firebase/firestore";
+
 export const ItemListContainer = (props) => {
   const [items, setItems] = useState([]);
+  
   const { id } = useParams();
 
   useEffect(() => {
@@ -34,7 +35,9 @@ export const ItemListContainer = (props) => {
 
   return (
     <Container className="mt-4">
-      <h1>{props.greeting}</h1>
+      <h1>
+        {props.greeting} 
+      </h1>
       {items ? <ItemList items={items} /> : <>Loading</>}
     </Container>
   );
