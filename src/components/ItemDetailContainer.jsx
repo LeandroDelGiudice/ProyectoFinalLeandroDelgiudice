@@ -17,7 +17,7 @@ export const ItemDetailContainer = () => {
   }, [id]);
 
   return (
-    <Container className="mt-4">
+    <Container className="mt-1">
       {item ? <ItemDetail item={item} /> : <>loading</>}
     </Container>
   );

@@ -1,0 +1,23 @@
+/* .custom-navbar {
+    width: 100%;
+    justify-content: center;
+    background-color: #fff; 
+  }
+  
+  .navbar-container {
+    padding: 10px; 
+  }
+  
+  .custom-navbar-text {
+    font-size: 36px; 
+  } */
+  .custom-navbar {
+    width: 100%;
+    justify-content: center;
+     /* Cambia el color de fondo según tus preferencias */
+  }
+  
+  .navbar-container {
+    padding: 10px;
+    /* Añade relleno para separar el contenido del borde */
+  }
