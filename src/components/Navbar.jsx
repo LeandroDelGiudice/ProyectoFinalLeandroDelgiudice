@@ -2,7 +2,6 @@ import { NavLink } from "react-router-dom";
 import { Container } from "react-bootstrap";
 import { Nav } from "react-bootstrap";
 import { Navbar } from "react-bootstrap";
-import "../main.css";
 import { CartWidget } from "./CartWidget";
 
 export const CustomNavbar = () => {

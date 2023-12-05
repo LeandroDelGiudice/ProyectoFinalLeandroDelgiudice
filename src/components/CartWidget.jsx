@@ -1,4 +1,3 @@
-import"../main.css"
 import carrito from "../assets/cart-icon.png";
 import { CartContext } from "../contexts/CartContext";
 import { useContext } from "react";
