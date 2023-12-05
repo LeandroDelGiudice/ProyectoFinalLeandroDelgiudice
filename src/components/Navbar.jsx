@@ -16,12 +16,12 @@ export const CustomNavbar = () => {
         </Navbar.Brand>
         <Nav>
           <Nav.Link>
-            <NavLink to="category/gorros" className="nav-link">
+            <NavLink to="category/motores" className="nav-link">
               Motores
             </NavLink>
           </Nav.Link>
           <Nav.Link>
-            <NavLink to="category/camisas" className="nav-link">
+            <NavLink to="category/cajas" className="nav-link">
               Cajas
             </NavLink>
           </Nav.Link>

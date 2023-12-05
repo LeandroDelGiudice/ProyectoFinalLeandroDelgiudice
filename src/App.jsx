@@ -1,4 +1,6 @@
+import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import { CartProvider } from "./contexts/CartContext.jsx";
 import "./app.css";
 import { ItemDetailContainer } from "./components/ItemDetailContainer.jsx";
@@ -7,9 +9,11 @@ import { Navbar } from "react-bootstrap";
 import { CustomNavbar } from "./components/NavBar.jsx";
 import { ItemListContainer } from "./components/ItemListContainer";
 import { Error404 } from "./components/Error404";
+import WhatsAppButton from "./components/WhatsAppButton.jsx";
 
 function App() {
   return (
+    <div>
     <CartProvider>
       <BrowserRouter>
         <Navbar>
@@ -31,6 +35,9 @@ function App() {
         </Routes>
       </BrowserRouter>
     </CartProvider>
+    <WhatsAppButton/>
+    </div>
+     
   );
 }
 
