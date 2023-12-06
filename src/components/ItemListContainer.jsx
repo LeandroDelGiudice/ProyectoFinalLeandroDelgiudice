@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 import { Container } from "react-bootstrap";
 import { ItemList } from "./ItemList";
 import {
@@ -34,9 +34,7 @@ export const ItemListContainer = (props) => {
 
   return (
     <Container className="mt-4">
-      <h1 className="display-5">
-        {props.greeting}
-      </h1>
+      <h1 className="display-5">{props.greeting}</h1>
       {items ? <ItemList items={items} /> : <>Loading</>}
     </Container>
   );

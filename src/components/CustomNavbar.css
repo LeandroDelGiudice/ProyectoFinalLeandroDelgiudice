@@ -1,26 +1,19 @@
-
-  .custom-navbar {
-    
-    display:flex;
-    justify-content: center;
-    font-family: 'Arial', sans-serif;
-     
-  }
-  .navbar-text {
-    font-size: 18px;
-    font-family: 'Arial', sans-serif; /* Cambia 'Arial' por la fuente que prefieras */
+.custom-navbar {
+  display: flex;
+  justify-content: center;
+  font-family: "Arial", sans-serif;
 }
-  
-  .navbar-container {
-    display: flex;
-    text-align: center;
-    /* justify-content: space-between;
-    width: 100%;
-    padding: 10px; */
+.navbar-text {
+  font-size: 18px;
+  font-family: "Arial", sans-serif;
+}
+
+.navbar-container {
+  display: flex;
+  text-align: center;
 }
 
 .navbar-collapse {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
-

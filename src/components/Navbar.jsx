@@ -34,7 +34,7 @@ export const CustomNavbar = () => {
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
-          <CartWidget />
+          <CartWidget/>
         </Navbar.Collapse>
       </Container>
     </Navbar>

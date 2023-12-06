@@ -11,6 +11,7 @@ const initialValues = {
 
 const Checkout = ({ total, clear, items }) => {
   const [buyer, setBuyer] = useState(initialValues);
+  const [validEmail, setValidEmail] = useState(true); 
   const navigate = useNavigate();
 
   const handleChange = (event) => {
@@ -19,11 +20,18 @@ const Checkout = ({ total, clear, items }) => {
       ...prevBuyer,
       [name]: value,
     }));
+
+  
+    if (name === "email") {
+    
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      setValidEmail(emailRegex.test(value));
+    }
   };
 
   const sendOrder = () => {
-    if (!buyer.email || !buyer.name || !buyer.phone) {
-      alert("Por favor, complete todos los campos del formulario.");
+    if (!validEmail || !buyer.name || !buyer.phone) {
+      alert("Por favor, complete todos los campos del formulario y asegúrese de que el correo electrónico sea válido.");
       return;
     }
 
@@ -40,7 +48,7 @@ const Checkout = ({ total, clear, items }) => {
         alert("Su orden " + id + " ha sido completada");
         setBuyer(initialValues);
         clear();
-        navigate("/"); 
+        navigate("/");
       }
     });
   };
@@ -57,7 +65,11 @@ const Checkout = ({ total, clear, items }) => {
             name="email"
             placeholder="E-mail"
             required
+            isInvalid={!validEmail} 
           />
+          <Form.Control.Feedback type="invalid">
+            El correo electrónico no es válido.
+          </Form.Control.Feedback>
         </Form.Group>
       </Row>
       <Row className="mb-3">
