@@ -1,74 +1,42 @@
-/* import { NavLink } from "react-router-dom";
-import { Container } from "react-bootstrap";
-import { Nav } from "react-bootstrap";
-import { Navbar } from "react-bootstrap";
-import { CartWidget } from "./CartWidget";
-
-export const CustomNavbar = () => {
-  return (
-    <Container className="justify-content-center">
-      <Navbar expand="md" bg="light" data-bs-theme="light">
-        <Navbar.Brand>
-          <NavLink to="/" className="nav-link">
-            Repuestos Usados BMW
-          </NavLink>
-        </Navbar.Brand>
-        <Nav>
-          <Nav.Link>
-            <NavLink to="category/motores" className="nav-link">
-              Motores
-            </NavLink>
-          </Nav.Link>
-          <Nav.Link>
-            <NavLink to="category/cajas" className="nav-link">
-              Cajas
-            </NavLink>
-          </Nav.Link>
-          <Nav.Link>
-            <NavLink to="category/diferenciales" className="nav-link">
-              Diferenciales
-            </NavLink>
-          </Nav.Link>
-        </Nav>
-        <CartWidget />
-      </Navbar>
-    </Container>
-  );
-};
- */
+import React from "react";
 import { NavLink } from "react-router-dom";
-import { Container, Nav, Navbar } from "react-bootstrap";
+import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { CartWidget } from "./CartWidget";
 import "./CustomNavbar.css";
 
 export const CustomNavbar = () => {
   return (
-    <Navbar expand="md" bg="light" variant="light" className="custom-navbar">
+    <Navbar expand="md" bg="dark" variant="dark" className="custom-navbar justify-content-center mx-auto">
       <Container fluid className="navbar-container">
         <Navbar.Brand>
           <NavLink to="/" className="nav-link">
-            Repuestos Usados BMW
+            <span className="display-5">Repuestos Usados BMW</span>
           </NavLink>
         </Navbar.Brand>
-        <Nav className="text-sm">
-          <Nav.Link>
-            <NavLink to="category/motores" className="nav-link">
-              Motores
-            </NavLink>
-          </Nav.Link>
-          <Nav.Link>
-            <NavLink to="category/cajas" className="nav-link">
-              Cajas
-            </NavLink>
-          </Nav.Link>
-          <Nav.Link>
-            <NavLink to="category/diferenciales" className="nav-link">
-              Diferenciales
-            </NavLink>
-          </Nav.Link>
-        </Nav>
-        <CartWidget />
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="text-sm">
+            <NavDropdown title="Categorías" id="basic-nav-dropdown">
+              <NavDropdown.Item>
+                <NavLink to="category/motores" className="nav-link text-dark">
+                  Motores
+                </NavLink>
+              </NavDropdown.Item>
+              <NavDropdown.Item>
+                <NavLink to="category/cajas" className="nav-link text-dark">
+                  Cajas
+                </NavLink>
+              </NavDropdown.Item>
+              <NavDropdown.Item>
+                <NavLink to="category/diferenciales" className="nav-link text-dark">
+                  Diferenciales
+                </NavLink>
+              </NavDropdown.Item>
+            </NavDropdown>
+          </Nav>
+          <CartWidget />
+        </Navbar.Collapse>
       </Container>
     </Navbar>
   );
-};
+}; 

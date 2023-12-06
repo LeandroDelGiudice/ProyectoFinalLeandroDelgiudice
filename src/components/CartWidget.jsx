@@ -10,9 +10,9 @@ export const CartWidget = () =>{
         );
     return ( 
         <>
-        <Link to="/cart" >
-        <img src={carrito} alt="carrito de compras" width= {40} />
-            <span>{total}</span>
+        <Link to="/cart" style={{ textDecoration: 'none' }}>
+        <img src={carrito} alt="carrito de compras" width= {70} />
+        <span style={{ color: 'white' }}>{total}</span>
             </Link>
         </>
             

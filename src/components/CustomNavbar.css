@@ -1,23 +1,26 @@
-/* .custom-navbar {
-    width: 100%;
-    justify-content: center;
-    background-color: #fff; 
-  }
-  
-  .navbar-container {
-    padding: 10px; 
-  }
-  
-  .custom-navbar-text {
-    font-size: 36px; 
-  } */
+
   .custom-navbar {
-    width: 100%;
+    
+    display:flex;
     justify-content: center;
-     /* Cambia el color de fondo según tus preferencias */
+    font-family: 'Arial', sans-serif;
+     
   }
+  .navbar-text {
+    font-size: 18px;
+    font-family: 'Arial', sans-serif; /* Cambia 'Arial' por la fuente que prefieras */
+}
   
   .navbar-container {
-    padding: 10px;
-    /* Añade relleno para separar el contenido del borde */
-  }
+    display: flex;
+    text-align: center;
+    /* justify-content: space-between;
+    width: 100%;
+    padding: 10px; */
+}
+
+.navbar-collapse {
+    display: flex;
+    justify-content: center;
+}
+
