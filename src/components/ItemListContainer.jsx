@@ -10,6 +10,12 @@ import {
   query,
 } from "firebase/firestore";
 
+const customStyles = {
+  greeting: {
+    fontFamily: 'arial black',
+  }
+};
+
 export const ItemListContainer = (props) => {
   const [items, setItems] = useState([]);
   const { id } = useParams();
@@ -34,7 +40,7 @@ export const ItemListContainer = (props) => {
 
   return (
     <Container className="mt-4">
-      <h1 className="display-5">{props.greeting}</h1>
+      <h1 style={customStyles.greeting} className="display-5">{props.greeting}</h1>
       {items ? <ItemList items={items} /> : <>Loading</>}
     </Container>
   );

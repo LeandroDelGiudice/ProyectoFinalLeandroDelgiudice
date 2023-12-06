@@ -98,7 +98,7 @@ const Checkout = ({ total, clear, items }) => {
           />
         </Form.Group>
       </Row>
-      <Button variant="primary" onClick={sendOrder}>
+      <Button variant="dark" onClick={sendOrder}>
         Enviar
       </Button>
     </Form>

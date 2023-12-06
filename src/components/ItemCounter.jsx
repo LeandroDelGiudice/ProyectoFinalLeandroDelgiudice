@@ -32,7 +32,7 @@ export const ItemCounter = ({ onAdd, stock, initial }) => {
           +
         </Button>
       </div>
-      <Button variant="primary" onClick={handleAdd}>
+      <Button variant="dark" onClick={handleAdd}>
         Agregar al Carro
       </Button>
     </div>
