@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button } from "react-bootstrap";
-
+import { Link } from "react-router-dom";
 export const ItemCounter = ({ onAdd, stock, initial }) => {
   const [count, setCount] = useState(initial);
 
@@ -43,6 +43,12 @@ export const ItemCounter = ({ onAdd, stock, initial }) => {
       <Button variant="dark" onClick={handleAdd}>
         Agregar al Carro
       </Button>
+      <br />
+      <Link to="/">
+        <Button variant="dark" className="mt-3">
+          Volver
+        </Button>
+      </Link>
     </div>
   );
 };
