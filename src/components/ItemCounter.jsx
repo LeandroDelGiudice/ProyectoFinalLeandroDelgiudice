@@ -24,11 +24,19 @@ export const ItemCounter = ({ onAdd, stock, initial }) => {
   return (
     <div className="text-center">
       <div className="d-flex justify-content-center align-items-center mb-3">
-        <Button variant="light" onClick={handleDecreaseCount} className="font-weight-bold">
+        <Button
+          variant="light"
+          onClick={handleDecreaseCount}
+          className="font-weight-bold"
+        >
           -
         </Button>
         <span className="mx-3 h4">{count}</span>
-        <Button variant="light" onClick={handleIncreaseCount} className="font-weight-bold">
+        <Button
+          variant="light"
+          onClick={handleIncreaseCount}
+          className="font-weight-bold"
+        >
           +
         </Button>
       </div>

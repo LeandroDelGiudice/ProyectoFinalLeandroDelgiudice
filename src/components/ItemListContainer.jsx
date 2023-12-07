@@ -12,8 +12,8 @@ import {
 
 const customStyles = {
   greeting: {
-    fontFamily: 'arial black',
-  }
+    fontFamily: "arial black",
+  },
 };
 
 export const ItemListContainer = (props) => {
@@ -40,7 +40,9 @@ export const ItemListContainer = (props) => {
 
   return (
     <Container className="mt-4">
-      <h1 style={customStyles.greeting} className="display-5">{props.greeting}</h1>
+      <h1 style={customStyles.greeting} className="display-5">
+        {props.greeting}
+      </h1>
       {items ? <ItemList items={items} /> : <>Loading</>}
     </Container>
   );

@@ -1,17 +1,26 @@
 import React, { useState } from "react";
 import { Form, Button, Row, Col } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import { getFirestore, collection, addDoc } from "firebase/firestore";
+import {
+  getFirestore,
+  collection,
+  addDoc,
+  getDoc,
+  updateDoc,
+  doc,
+} from "firebase/firestore";
 
 const initialValues = {
   email: "",
+  confirmEmail: "",
   name: "",
   phone: "",
 };
 
 const Checkout = ({ total, clear, items }) => {
   const [buyer, setBuyer] = useState(initialValues);
-  const [validEmail, setValidEmail] = useState(true); 
+  const [validEmail, setValidEmail] = useState(true);
+  const [emailMatch, setEmailMatch] = useState(true);
   const navigate = useNavigate();
 
   const handleChange = (event) => {
@@ -21,36 +30,54 @@ const Checkout = ({ total, clear, items }) => {
       [name]: value,
     }));
 
-  
-    if (name === "email") {
-    
+    if (name === "email" || name === "confirmEmail") {
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       setValidEmail(emailRegex.test(value));
+      if (name === "confirmEmail") {
+        setEmailMatch(buyer.email === value);
+      }
     }
   };
 
-  const sendOrder = () => {
-    if (!validEmail || !buyer.name || !buyer.phone) {
-      alert("Por favor, complete todos los campos del formulario y asegúrese de que el correo electrónico sea válido.");
+  const sendOrder = async () => {
+    if (!validEmail || !emailMatch || !buyer.name || !buyer.phone) {
+      alert(
+        "Por favor, complete todos los campos del formulario y asegúrese de que el correo electrónico sea válido y coincida."
+      );
       return;
     }
 
-    const order = {
-      buyer,
-      items,
-      total,
-    };
-
     const db = getFirestore();
     const orderCollection = collection(db, "orders");
-    addDoc(orderCollection, order).then(({ id }) => {
-      if (id) {
-        alert("Su orden " + id + " ha sido completada");
-        setBuyer(initialValues);
-        clear();
-        navigate("/");
+
+    try {
+      const orderRef = await addDoc(orderCollection, {
+        buyer,
+        items,
+        total,
+      });
+
+      for (const item of items) {
+        const itemRef = doc(db, "items", item.id);
+        const itemDoc = await getDoc(itemRef);
+
+        if (itemDoc.exists()) {
+          const currentStock = itemDoc.data().stock;
+          const newStock = currentStock - item.quantity;
+
+          await updateDoc(itemRef, { stock: newStock });
+        } else {
+          console.error(`No se encontró el item con id ${item.id}`);
+        }
       }
-    });
+
+      alert(`Su orden ${orderRef.id} ha sido completada`);
+      setBuyer(initialValues);
+      clear();
+      navigate("/");
+    } catch (error) {
+      console.error("Error al enviar la orden:", error);
+    }
   };
 
   return (
@@ -65,10 +92,25 @@ const Checkout = ({ total, clear, items }) => {
             name="email"
             placeholder="E-mail"
             required
-            isInvalid={!validEmail} 
+            isInvalid={!validEmail}
           />
           <Form.Control.Feedback type="invalid">
             El correo electrónico no es válido.
+          </Form.Control.Feedback>
+        </Form.Group>
+        <Form.Group as={Col} controlId="formConfirmEmail">
+          <Form.Label>Confirm Email</Form.Label>
+          <Form.Control
+            type="email"
+            value={buyer.confirmEmail}
+            onChange={handleChange}
+            name="confirmEmail"
+            placeholder="Confirm E-mail"
+            required
+            isInvalid={!emailMatch}
+          />
+          <Form.Control.Feedback type="invalid">
+            Los correos electrónicos no coinciden.
           </Form.Control.Feedback>
         </Form.Group>
       </Row>

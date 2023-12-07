@@ -14,30 +14,29 @@ import WhatsAppButton from "./components/WhatsAppButton.jsx";
 function App() {
   return (
     <div>
-    <CartProvider>
-      <BrowserRouter>
-        <Navbar>
-          <CustomNavbar />
-        </Navbar>
-        <Routes>
-          <Route
-            path="/"
-            element={<ItemListContainer greeting="Repuestos en stock" />}
-          />
-          <Route
-            path="/category/:id"
-            element={<ItemListContainer greeting="Repuestos en stock" />}
-          />
-          <Route path="/items/:id" element={<ItemDetailContainer />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/checkout" element={<div>Checkout</div>} />
-          <Route path="*" element={<Error404 />} />
-        </Routes>
-      </BrowserRouter>
-    </CartProvider>
-    <WhatsAppButton/>
+      <CartProvider>
+        <BrowserRouter>
+          <Navbar>
+            <CustomNavbar />
+          </Navbar>
+          <Routes>
+            <Route
+              path="/"
+              element={<ItemListContainer greeting="Repuestos en stock" />}
+            />
+            <Route
+              path="/category/:id"
+              element={<ItemListContainer greeting="Repuestos en stock" />}
+            />
+            <Route path="/items/:id" element={<ItemDetailContainer />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/checkout" element={<div>Checkout</div>} />
+            <Route path="*" element={<Error404 />} />
+          </Routes>
+        </BrowserRouter>
+      </CartProvider>
+      <WhatsAppButton />
     </div>
-     
   );
 }
 
