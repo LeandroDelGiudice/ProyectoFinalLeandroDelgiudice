@@ -6,7 +6,7 @@ import "./app.css";
 import { ItemDetailContainer } from "./components/ItemDetailContainer.jsx";
 import { Cart } from "./components/cart.jsx";
 import { Navbar } from "react-bootstrap";
-import { CustomNavbar } from "./components/NavBar.jsx";
+import { CustomNavbar } from "./components/Navbar.jsx";
 import { ItemListContainer } from "./components/ItemListContainer";
 import { Error404 } from "./components/Error404";
 import WhatsAppButton from "./components/WhatsAppButton.jsx";
